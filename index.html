@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agenda de Contactos</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="contenedor-barra">
+        <h1>Agenda de Contactos</h1>
+    </div>
+    <div class="bg-amarillo contenedor sombra">
+        <form id="contacto" action="#">
+            <legend>Añada un contacto <span>Todos los campos son obligatorios</span> </legend>
+            <div class="campos">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" placeholder="Nombre Contacto" id="nombre" value="">
+                </div>
+                <div class="campo">
+                    <label for="empresa">Empresa:</label>
+                    <input type="text" placeholder="Nombre Empresa" id="empresa" value="">
+                </div>
+                <div class="campo">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" placeholder="Número Teléfono" id="telefono" value="">
+                </div>
+            </div>
+            <div class="campo enviar">
+                <input type="hidden" id="accion" value="crear">
+                <input type="submit" value="Añadir">
+            </div>
+        </form>
+    </div>
+
+    <div class="bg-blanco contenedor sombra contactos">
+        <div class="contenedor-contactos">
+            <h2>Contactos</h2>
+            <input type="text" id="buscar" class="buscador sombra" placeholder="Buscar contactos...">
+            <p class="total-contactos"><span></span> Contactos</p>
+            <div class="contenedor-tabla">
+                <table id="listado-contactos" class="listado-contactos">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Empresa</th>
+                            <th>Teléfono</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pizzeria</td>
+                            <td>SuperPizza</td>
+                            <td>999 131 3921</td>
+                            <td>
+                                <a class="btn-editar btn" href="#">
+                                    <i class="fas fa-pen-square"></i>
+                                </a>
+                                <button type="button" class="btn-borrar btn">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Farmacia 50 Sur</td>
+                            <td>Farmacias del Ahorro</td>
+                            <td>999 928 6688</td>
+                            <td>
+                                <a class="btn-editar btn" href="#">
+                                    <i class="fas fa-pen-square"></i>
+                                </a>
+                                <button type="button" class="btn-borrar btn">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Restaurant</td>
+                            <td>Un Rincón de Maní</td>
+                            <td>999 929 3689</td>
+                            <td>
+                                <a class="btn-editar btn" href="#">
+                                    <i class="fas fa-pen-square"></i>
+                                </a>
+                                <button type="button" class="btn-borrar btn">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Refaccionaria - Santa Rosa</td>
+                            <td>AGP</td>
+                            <td>999 940 6666</td>
+                            <td>
+                                <a class="btn-editar btn" href="#">
+                                    <i class="fas fa-pen-square"></i>
+                                </a>
+                                <button type="button" class="btn-borrar btn">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
