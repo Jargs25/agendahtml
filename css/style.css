@@ -127,6 +127,11 @@ legend span {
     display: block;
 }
 
+legend span a {
+    color: inherit;
+    font-size: inherit;
+}
+
 @media (min-width: 768px) {
     .campos {
         display: flex;
